@@ -32,6 +32,7 @@ Go to:
 Change <i>appHtml</i> value from,
  
 <code>resolveApp('public/index.html')</code> to <code>resolveApp('views/index.html')</code>
+
 <br/>
 <b>In package.json:</b>
 
@@ -49,6 +50,7 @@ to
      ["@babel/preset-react", {"runtime": "automatic"}]
   ]
 </pre>
+
 <br/>
 <b>In webpack.config.js:</b>
 
