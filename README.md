@@ -1,60 +1,68 @@
-# Technical-Documentation
-•	React is JS library for building user interface.
-•	Single Page Application
+# Technical Documentation for Customizing React Folder Structure
+<ul><li>React is JS library for building user interface</li>
+<li>Single Page Application</li></ul>
 
 
-CREATING REACT APPLICATION
+# Creating React Application
 To create react application in node-js, use create-react-app command. 
-npx create-react-app appName 
-<pre><code>cd appName
+<pre><code>npx create-react-app appName 
+cd appName
 npm start</code></pre>
-After npm start command, the application gets starts at localhost:3000.
+After npm start command, the application gets starts at <i>localhost:3000</i>.
 
 
-CUSTOMIZING
-To customize react application to our likings, we use eject command and install @babel/preset-react package as dev dependency.
-npx create-react-app appName 
+# Customize
+To customize react application to our likings, we use <code>eject</code> command and install <i>@babel/preset-react</i> package as <i>dev</i> dependency.
+<pre><code>npx create-react-app appName 
 cd appName
 npm run eject
-npm i -D @babel/preset-react @babel/preset-env
+npm i -D @babel/preset-react @babel/preset-env</pre></code>
 
  
-Add css, js, data folder in public folder and keep all the files relating to it in those folders.
+I would like to add <i>css, js</i> and <i>data</i> folder in <i>public</i> folder and keep all the files relating to it in those folders.
 
-Create a new folder called views and move index.html file from public folder to this newly created folder.
+I would also like to create a new folder called <i>views</i> and move my <i>index.html</i> file here.
   
-Now follow the below steps to customize the react application:
+<br>
+Now follow the below steps to implement the necessary changes:
 
-	config -> paths.js -> module.exports -> appHtml
-Change appHtml value from,
+Go to:
+
+<pre>config -> paths.js -> module.exports -> appHtml</pre>
+
+Change <i>appHtml</i> value from,
  
-resolveApp('public/index.html') 
-to 
-resolveApp('views/index.html')
+<code>resolveApp('public/index.html')</code> to <code>resolveApp('views/index.html')</code>
 
-	In package.json:
+<b>In package.json:</b>
 
-under babel :
+<i>Under babel</i>:
+
 Change,
+<pre>
 "presets": [
       "react-app"
-    ]
-to
+    ]</pre>
+to 
+<pre>
 "presets": [
       "@babel/preset-env",
      ["@babel/preset-react", {"runtime": "automatic"}]
   ]
+</pre>
 
-	In webpack.config.js:
+<b>In webpack.config.js:</b>
 
-1. ctrl+F -> appSrc -> go to 4th of 5th selection ie.
-Just below "// Process application JS with Babel.
- // The preset includes JSX, Flow, TypeScript, and some ESnext features." comment, change,
+<ol><li> <pre>ctrl+F -> appSrc -> go to 4th of 5th selection </pre> ie.
+Just below <i>// Process application JS with Babel.
+ // The preset includes JSX, Flow, TypeScript, and some ESnext features.</i> comment, 
+ 
+Change,
 
-include: path.appSrc
+<code>include: path.appSrc</code>
 to
-include: [paths.appSrc, paths.appPublic]
+<code>include: [paths.appSrc, paths.appPublic]</code></li>
 
-2. ctrl+F -> ModuleScopePlugin -> comment the field
-
+<li> <pre>ctrl+F -> ModuleScopePlugin -> comment the field</pre>
+</li></ol>
 
