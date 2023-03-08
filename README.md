@@ -23,9 +23,10 @@ I would like to add <b>css, js</b> and <b>data</b> folders in <i><b>public</b></
 
 I would also like to create a new folder called <b>views</b> and move my <b><i>index.html</i></b> file here.
   
-<br/>
+</br>
 Now follow the below steps to implement the necessary changes:
-<br/>
+
+
 Go to:
 <pre>config -> paths.js -> module.exports -> appHtml</pre>
 
@@ -33,8 +34,9 @@ Change <i>appHtml</i> value from,
  
 <code>resolveApp('public/index.html')</code> to <code>resolveApp('views/index.html')</code>
 
-<br/>
+
 <b>In package.json:</b>
+
 
 <i>Under babel</i>:
 
@@ -51,7 +53,7 @@ to
   ]
 </pre>
 
-<br/>
+
 <b>In webpack.config.js:</b>
 
 <ol><li> <pre>ctrl+F -> appSrc -> go to 4th of 5th selection </pre> ie.
