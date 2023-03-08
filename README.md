@@ -19,9 +19,9 @@ npm run eject
 npm i -D @babel/preset-react @babel/preset-env</pre></code>
 
  
-I would like to add <i>css, js</i> and <i>data</i> folder in <i>public</i> folder and keep all the files relating to it in those folders.
+I would like to add <b>css, js</b> and <b>data</b> folder in <i><b>public</b></i> folder and keep all the files relating to it in those folders.
 
-I would also like to create a new folder called <i>views</i> and move my <i>index.html</i> file here.
+I would also like to create a new folder called <b>views</b> and move my <b><i>index.html</i></b> file here.
   
 <br>
 Now follow the below steps to implement the necessary changes:
