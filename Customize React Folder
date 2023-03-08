@@ -5,8 +5,8 @@
 CREATING REACT APPLICATION
 To create react application in node-js, use create-react-app command. 
 npx create-react-app appName 
-cd appName
-npm start
+<pre><code>cd appName
+npm start</code></pre>
 After npm start command, the application gets starts at localhost:3000.
 
 
